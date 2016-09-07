@@ -60,7 +60,7 @@ function mobius_fonts_url() {
 
    if ( $fonts ) {
       $fonts_url = add_query_arg( array(
-         'family' => urlencode( implode( '|', $fonts ) ),
+         'family' => implode( '|', $fonts ),
          'subset' => urlencode( $subsets ),
       ), 'https://fonts.googleapis.com/css' );
    }
@@ -89,7 +89,7 @@ function mobius_scripts() {
    // Theme stylesheet.
    wp_enqueue_style( 'mobius-style', get_stylesheet_uri() );
    // Load the Bootstrap stylesheet.
-   wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-min.css', array( 'mobius-style' ), '3.3.7' );
+   wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array( 'mobius-style' ), '3.3.7' );
 
    // Load Bootstrap js
    wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '3.3.7', true );
