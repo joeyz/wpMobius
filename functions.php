@@ -54,17 +54,10 @@ function twentysixteen_fonts_url() {
    $fonts     = array();
    $subsets   = 'latin,latin-ext';
    /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-   if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'mobius' ) ) {
-      $fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+   if ( 'off' !== _x( 'on', 'Roboto+Slab font: on or off', 'mobius' ) ) {
+      $fonts[] = 'Roboto+Slab:400,700';
    }
-   /* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-   if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'mobius' ) ) {
-      $fonts[] = 'Montserrat:400,700';
-   }
-   /* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-   if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'mobius' ) ) {
-      $fonts[] = 'Inconsolata:400';
-   }
+
    if ( $fonts ) {
       $fonts_url = add_query_arg( array(
          'family' => urlencode( implode( '|', $fonts ) ),
