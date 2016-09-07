@@ -49,7 +49,7 @@ if ( ! function_exists( 'mobius_fonts_url' ) ) :
  * Register Google fonts for Mobius.
  *
  */
-function twentysixteen_fonts_url() {
+function mobius_fonts_url() {
    $fonts_url = '';
    $fonts     = array();
    $subsets   = 'latin,latin-ext';
