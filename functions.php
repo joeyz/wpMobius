@@ -86,10 +86,11 @@ function mobius_scripts() {
 
    // Add Font Awesome, used in the main stylesheet.
    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.6.3' );
-   // Theme stylesheet.
-   wp_enqueue_style( 'mobius-style', get_stylesheet_uri() );
    // Load the Bootstrap stylesheet.
    wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array( 'mobius-style' ), '3.3.7' );
+   // Theme stylesheet.
+   wp_enqueue_style( 'mobius-style', get_stylesheet_uri() );
+
 
    // Load Bootstrap js
    wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '3.3.7', true );
